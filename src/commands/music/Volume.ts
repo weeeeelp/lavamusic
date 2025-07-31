@@ -54,13 +54,13 @@ export default class Volume extends Command {
       return await ctx.sendMessage(
         ctx.locale("event.message.no_music_playing"),
       );
-    if (Number.isNaN(number) || number < 0 || number > 200) {
+    if (Number.isNaN(number) || number < 0 || number > 10000) {
       let description = "";
       if (Number.isNaN(number))
         description = ctx.locale("cmd.volume.messages.invalid_number");
       else if (number < 0)
         description = ctx.locale("cmd.volume.messages.too_low");
-      else if (number > 200)
+      else if (number > 10000)
         description = ctx.locale("cmd.volume.messages.too_high");
 
       return await ctx.sendMessage({

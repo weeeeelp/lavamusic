@@ -62,7 +62,7 @@ services:
     # services for lavamusic
     lavamusic:
         container_name: lavamusic
-        image: ghcr.io/c0ders-io/c0ders-io/lavamusic:main
+        image: lavamusic:local
         environment:
             # lavalink nodes
             - NODES=[{"id":"LavaMusic","host":"lavalink","port":2333,"authorization":"youshallnotpass"}]
@@ -73,7 +73,7 @@ services:
 
         volumes:
             # mount .env from the same directory or use environment variables
-            - ${PWD}/.env:/opt/lavamusic/.env
+            - /opt/lavamusic/env:/opt/lavamusic/.env
             - ./locales:/opt/lavamusic/locales
         restart: on-failure
         depends_on:
