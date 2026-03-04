@@ -197,10 +197,10 @@
 	"pitch": {
 		"description": "Toggle the pitch filter",
 		"options": {
-			"pitch": "The value to set the pitch to (0.5 - 5)"
+			"pitch": "The value to set the pitch to (0.5 - 500)"
 		},
 		"errors": {
-			"invalid_number": "Please provide a valid number between 0.5 and 5."
+			"invalid_number": "Please provide a valid number between 0.5 and 500."
 		},
 		"messages": {
 			"pitch_set": "`✅` | Pitch has been set to **{pitch}**."
@@ -209,10 +209,10 @@
 	"rate": {
 		"description": "Change the rate of the song",
 		"options": {
-			"rate": "The value to set the rate to (0.5 - 5)"
+			"rate": "The value to set the rate to (0.5 - 500)"
 		},
 		"errors": {
-			"invalid_number": "Please provide a valid number between 0.5 and 5."
+			"invalid_number": "Please provide a valid number between 0.5 and 500."
 		},
 		"messages": {
 			"rate_set": "`✅` | Rate has been set to **{rate}**."
@@ -234,10 +234,10 @@
 	"speed": {
 		"description": "Change the speed of the song",
 		"options": {
-			"speed": "The speed you want to set (0.5 - 5)"
+			"speed": "The speed you want to set (0.5 - 500)"
 		},
 		"messages": {
-			"invalid_number": "Please provide a valid number between 0.5 and 5.",
+			"invalid_number": "Please provide a valid number between 0.5 and 500.",
 			"set_speed": "`✅` | Speed has been set to **{speed}**."
 		}
 	},
@@ -505,12 +505,12 @@
 	"volume": {
 		"description": "Sets the player volume",
 		"options": {
-			"number": "The volume you want to set (0-200)"
+			"number": "The volume you want to set (0-10000)"
 		},
 		"messages": {
 			"invalid_number": "Please provide a valid number.",
 			"too_low": "The volume can't be lower than 0.",
-			"too_high": "The volume can't be higher than 200. Do you want to damage your hearing or speakers? Hmmm, I don't think that's such a good idea.",
+			"too_high": "The volume can't be higher than 10000. Do you want to damage your hearing or speakers? Hmmm, I don't think that's such a good idea.",
 			"set": "Set the volume to {volume}"
 		}
 	},

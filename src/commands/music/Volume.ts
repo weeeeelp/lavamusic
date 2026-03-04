@@ -44,12 +44,12 @@ export default class Volume extends Command {
 		const embed = this.client.embed();
 		const number = Number(args[0]);
 		if (!player) return await ctx.sendMessage(ctx.locale(I18N.events.message.no_music_playing));
-		if (Number.isNaN(number) || number < 0 || number > 200) {
+		if (Number.isNaN(number) || number < 0 || number > 10000) {
 			let description = "";
 			if (Number.isNaN(number))
 				description = ctx.locale(I18N.commands.volume.messages.invalid_number);
 			else if (number < 0) description = ctx.locale(I18N.commands.volume.messages.too_low);
-			else if (number > 200) description = ctx.locale(I18N.commands.volume.messages.too_high);
+			else if (number > 10000) description = ctx.locale(I18N.commands.volume.messages.too_high);
 
 			return await ctx.sendMessage({
 				embeds: [embed.setColor(this.client.color.red).setDescription(description)],

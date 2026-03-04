@@ -7,7 +7,7 @@ services:
     # Useful if you want to use an external/hosted Lavalink node
     profiles: [lavalink, all]
     container_name: lavamusic-lavalink
-    image: ghcr.io/lavalink-devs/lavalink:latest
+    image: lavamusic:local
     restart: unless-stopped
     environment:
       - _JAVA_OPTIONS=-Xmx2G # Limit memory usage to 2GB
@@ -15,6 +15,7 @@ services:
     volumes:
       # Mount application.yml from the same directory or use environment variables
       - ./Lavalink/application.yml:/opt/Lavalink/application.yml
+      - /opt/lavamusic/env:/opt/lavamusic/env
       # Persist plugins between restarts
       # Make sure to set the correct permissions (user: 322, group: 322)
       - ./Lavalink/plugins/:/opt/Lavalink/plugins/

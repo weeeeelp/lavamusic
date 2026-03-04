@@ -47,7 +47,7 @@ export default class Pitch extends Command {
 		const isValidNumber = /^[0-9]*\.?[0-9]+$/.test(pitchString);
 		const pitch = Number.parseFloat(pitchString);
 
-		if (!isValidNumber || Number.isNaN(pitch) || pitch < 0.5 || pitch > 5) {
+		if (!isValidNumber || Number.isNaN(pitch) || pitch < 0 || pitch > 500) {
 			await ctx.sendMessage({
 				embeds: [
 					{
